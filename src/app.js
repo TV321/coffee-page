@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.sass';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MainComponent from './components/MainComponent';
 
-const template = <p>Hello from React!!!</p>;
 
-ReactDOM.render(template, document.getElementById('root'));
+
+
+ReactDOM.render(<MainComponent />, document.getElementById('root'));
