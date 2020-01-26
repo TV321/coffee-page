@@ -14,7 +14,7 @@ import logo from '../images/logo.png'
 const Navigation = () =>{
     return(
             <div>
-            <Navbar className="nav-style" expand="md">
+            <Navbar className="nav-style" expand="md" fixed="top">
                 <Container>
                 <Navbar.Brand href="#home">
                     <div id="nav-logo">
@@ -22,7 +22,7 @@ const Navigation = () =>{
                             alt=""
                             src={ logo }
                             width="auto"
-                            height="80"
+                            height="70"
                             className="d-inline-block align-top"
                         />{' '}
                         <p id="nav-logo-text">Starduck Coffee</p>
