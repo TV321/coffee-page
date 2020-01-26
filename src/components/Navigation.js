@@ -14,7 +14,7 @@ import logo from '../images/logo.png'
 const Navigation = () =>{
     return(
             <div>
-            <Navbar className="nav-style" expand="lg">
+            <Navbar className="nav-style" expand="md">
                 <Container>
                 <Navbar.Brand href="#home">
                     <div id="nav-logo">
