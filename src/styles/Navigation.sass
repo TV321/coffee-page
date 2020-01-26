@@ -1,3 +1,36 @@
+@font-face
+	font-family: AnitaSS
+	src: url('../font/Anita Semi Square.ttf')
+
 .nav-style
-    background-color: #969696
+    background-color: #ffe4b4
     color: #333
+    .nav-links
+        font-family: AnitaSS
+        font-size: 1.3rem
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            border-bottom: 2px solid #4a1616
+            bottom: .3em
+            left: .9em
+            right: .9em
+            transform: scale(0, 1)
+            transition: transform linear 300ms
+        &:hover::before
+            transform: scale(1, 1)
+
+
+#nav-logo
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 180px
+    border: 1px solid red
+    white-space: normal
+    #nav-logo-text
+        font-size: 25px
+        margin: 0
+        line-height: 25px
+        font-family: AnitaSS
