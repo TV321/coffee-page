@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import CardImg from '../images/cardImg.jpg'
 
 
 const About = () => {
@@ -25,12 +26,12 @@ const About = () => {
                     </Col>
                 </Row>
               <Row>
-                <Col className="cards-col">
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="//unsplash.it/200" />
+                <Col className="cards-col" md={4}>
+                    <Card style={{ width: '360px' }}>
+                        <Card.Img variant="top" src={ CardImg } />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                             <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                            <Card.Title className="card-title">Euismod Cursus</Card.Title>
+                             <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
@@ -38,12 +39,12 @@ const About = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col className="cards-col">
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="//unsplash.it/200" />
+                <Col className="cards-col" md={4}>
+                    <Card style={{ width: '360px' }}>
+                        <Card.Img variant="top" src={ CardImg } />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                             <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                            <Card.Title className="card-title">Euismod Cursus</Card.Title>
+                             <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
@@ -51,12 +52,12 @@ const About = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col className="cards-col">
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="//unsplash.it/200" />
+                <Col className="cards-col" md={4}>
+                    <Card style={{ width: '360px' }}>
+                        <Card.Img variant="top" src={ CardImg } />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                             <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                            <Card.Title className="card-title">Euismod Cursus</Card.Title>
+                             <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
