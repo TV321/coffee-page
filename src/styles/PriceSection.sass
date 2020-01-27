@@ -1,0 +1,41 @@
+@font-face
+	font-family: Kaushan
+	src: url('../fonts/KaushanScript-Regular.ttf')
+@font-face
+	font-family: Rale
+	src: url('../fonts/Raleway-Regular.ttf')
+
+#price-section
+    padding: 50px 0
+
+    background: #4b4a4a
+    background-image: url('../images/t33.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+    #inner-section
+        border: 1px solid #b57c58
+        padding: 100px 50px
+        background: #fff6ec
+        text-align: center
+
+        h2
+            font-size: 1.5em
+            font-family: Kaushan
+        h3
+            font-size: 2em
+            font-family: Kaushan
+            color: #b57c58
+        p
+            font-family: Rale
+            margin: 40px 0
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                border-bottom: 2px solid #4a1616
+                bottom: - 1em
+                left: 15%
+                right: 15%
