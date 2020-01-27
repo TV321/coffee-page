@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import HomeSection from './HomeSection';
 import About from './About';
+import CarouselSection from './CarouselSection';
 
 const MainComponent = () =>{
     return(
@@ -9,6 +10,7 @@ const MainComponent = () =>{
             <Navigation />
             <HomeSection />
             <About />
+            <CarouselSection />
         </React.Fragment>
     )
 }
