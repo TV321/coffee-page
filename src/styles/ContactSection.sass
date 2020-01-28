@@ -1,0 +1,69 @@
+@font-face
+	font-family: Kaushan
+	src: url('../fonts/KaushanScript-Regular.ttf')
+@font-face
+	font-family: Rale
+	src: url('../fonts/Raleway-Regular.ttf')
+
+#contact-section
+    background: #ebd1ab
+    #inner-contact
+        padding: 100px
+        .contact-btn
+            border: 0
+            border-radius: 0
+            background: #ebd1ab
+            color: #4a1616
+            box-shadow: none
+            position: relative
+            transition: all linear 100ms
+            border-bottom: 1px solid #d7ba8e
+            &:active
+                box-shadow: none
+            &:hover
+                box-shadow: none
+            &::after
+                content: ''
+                position: absolute
+                border-bottom: 2px solid #b57c58
+                bottom: 0
+                left: 0
+                right: 0
+                width: 0
+                transition: all linear 100ms
+            &:hover::after
+                width: 100%
+
+        h2
+            font-family: Kaushan
+        h3
+            font-family: Kaushan
+            color: #b57c58
+            margin-bottom: 50px
+        div.form-group
+            max-width: 500px
+            font-family: Rale
+        input.form-control,
+        textarea.form-control
+            position: relative
+            border: 0
+            border-radius: 0
+            background-color: #ebd1ab
+            transition: all linear 400ms
+            border-bottom: 1px solid #d7ba8e
+            &:focus
+                border-bottom: 2px solid #b57c58
+                box-shadow: none
+        .input-wrap
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                border-bottom: 2px solid #b57c58
+                bottom: 0
+                left: 0
+                right: 0
+                width: 0
+                transition: all linear 300ms
+            &:hover::after
+                width: 100%

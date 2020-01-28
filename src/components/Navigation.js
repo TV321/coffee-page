@@ -25,7 +25,7 @@ const Navigation = () =>{
                             height="70"
                             className="d-inline-block align-top"
                         />{' '}
-                        <p id="nav-logo-text">Starduck Coffee</p>
+                        <p id="nav-logo-text">Starducks Coffee</p>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
