@@ -4,7 +4,7 @@ import '../styles/HomeSection.sass';
 
 const HomeSection = () => {
     return(
-            <main>
+            <main id="home">
                 <div id="space-a"></div>
                 <div id="container-home">
                     <h3>Lorem ipsum dolor amet</h3>

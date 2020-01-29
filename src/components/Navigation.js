@@ -8,8 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import '../styles/Navigation.sass';
 import logo from '../images/logo.png'
-
-
+import Scrollspy from 'react-scrollspy'
 
 const Navigation = () =>{
     return(
@@ -34,9 +33,9 @@ const Navigation = () =>{
 
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#memes" className="nav-links">Home</Nav.Link>
-                        <Nav.Link href="#memes" className="nav-links">About</Nav.Link>
-                        <Nav.Link href="#memes" className="nav-links">Contact</Nav.Link>
+                        <Nav.Link href="#home" className="nav-links" >Home</Nav.Link>
+                        <Nav.Link href="#about" className="nav-links" >About</Nav.Link>
+                        <Nav.Link href="#contact-section" className="nav-links" >Contact</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 </Container>

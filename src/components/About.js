@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import CardImg from '../images/cardImg.jpg'
+import CarouselSection from './CarouselSection';
 
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
 
                 </Col>
               </Row>
+
                 <Row>
                   <Col md={{ span: 6, offset: 3 }}>
                         <p>Phasellus bibendum arcu sit amet eros scelerisque pharetra.
@@ -25,6 +27,7 @@ const About = () => {
                         </p>
                     </Col>
                 </Row>
+                <CarouselSection />
               <Row>
                 <Col className="cards-col" md={4}>
                     <Card style={{ width: '360px' }}>
