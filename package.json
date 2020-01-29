@@ -31,6 +31,7 @@
   "dependencies": {
     "@svgr/webpack": "^5.1.0",
     "bootstrap": "^4.4.1",
+    "framer-motion": "^1.8.3",
     "image-webpack-loader": "^6.0.0",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
