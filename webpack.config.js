@@ -9,9 +9,20 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                     {
+                        loader: 'svg-url-loader',
+                        options: {
+                          limit: 10000,
+                        },
+                    },
+                ],
             },
             {
                 test:/\.s[ac]ss$/i,
@@ -45,7 +56,8 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+
         ]
     },
     devtool: 'cheap-module-eval-source-map',

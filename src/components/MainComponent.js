@@ -5,6 +5,7 @@ import About from './About';
 import CarouselSection from './CarouselSection';
 import PriceSection from './PriceSection';
 import ContactSection from './ContactSection';
+import Footer from './Footer';
 
 const MainComponent = () =>{
     return(
@@ -15,6 +16,7 @@ const MainComponent = () =>{
             <About />
             <PriceSection />
             <ContactSection />
+            <Footer />
         </React.Fragment>
     )
 }
