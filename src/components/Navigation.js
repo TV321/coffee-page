@@ -8,12 +8,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import '../styles/Navigation.sass';
 import logo from '../images/logo.png'
-import Scrollspy from 'react-scrollspy'
 
 const Navigation = () =>{
     return(
             <div>
-            <Navbar className="nav-style" expand="md" fixed="top">
+            <Navbar collapseOnSelect={true} className="nav-style" expand="md" fixed="top">
                 <Container>
                 <Navbar.Brand href="#home">
                     <div id="nav-logo">

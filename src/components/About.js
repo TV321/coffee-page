@@ -30,7 +30,7 @@ const About = () => {
                 <CarouselSection />
               <Row>
                 <Col className="cards-col" md={4}>
-                    <Card style={{ width: '360px' }}>
+                    <Card style={{ maxWidth: '360px' }}>
                         <Card.Img variant="top" src={ CardImg } />
                         <Card.Body>
                             <Card.Title className="card-title">Euismod Cursus</Card.Title>
@@ -43,7 +43,7 @@ const About = () => {
                     </Card>
                 </Col>
                 <Col className="cards-col" md={4}>
-                    <Card style={{ width: '360px' }}>
+                    <Card style={{ maxWidth: '360px' }}>
                         <Card.Img variant="top" src={ CardImg } />
                         <Card.Body>
                             <Card.Title className="card-title">Euismod Cursus</Card.Title>
@@ -56,7 +56,7 @@ const About = () => {
                     </Card>
                 </Col>
                 <Col className="cards-col" md={4}>
-                    <Card style={{ width: '360px' }}>
+                    <Card style={{ maxWidth: '360px' }}>
                         <Card.Img variant="top" src={ CardImg } />
                         <Card.Body>
                             <Card.Title className="card-title">Euismod Cursus</Card.Title>

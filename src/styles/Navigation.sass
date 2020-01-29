@@ -3,10 +3,14 @@
 	src: url('../fonts/Anita Semi Square.ttf')
 .navbar-light
 	.navbar-nav
-		.nav-link
-			color: #907f65
 		.nav-link.active
 			color: #907f65
+		.nav-link
+			color: #907f65
+			&:hover
+				color: #414040
+
+
 .navbar
 	padding: 0
 .nav-style
@@ -48,3 +52,7 @@
                 left: 0
                 right: 0
                 transform: scale(1, 1)
+@media all and(max-width: 580px)
+	.navbar-nav
+		.nav-link
+			padding: 10px
