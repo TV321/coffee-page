@@ -35,11 +35,7 @@ class About extends Component{
             // rootMargin: "-100px"
          }
         const observer = new IntersectionObserver((entries, observer) =>{
-            console.log(entries)
             entries.forEach(entry => {
-                console.log(entry)
-                console.log(entry.target.id)
-
                 const id = entry.target.id
                 const index = id - 1
                 if(entry.isIntersecting){
