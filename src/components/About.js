@@ -11,31 +11,60 @@ import { motion } from "framer-motion"
 
 class About extends Component{
     state = {
-        intersecting: false
+        intersecting: false,
+        inter: [
+            {
+                id: 1,
+                int: false,
+            },
+            {
+                id: 2,
+                int: false,
+            },
+            {
+                id: 3,
+                int: false,
+            }
+        ]
     }
     componentDidMount() {
-        const one = document.querySelector('#part-one')
-        const options = { }
+        const pageSections = document.querySelectorAll(".section")
+        const options = {
+            root: null,
+            threshold: 1,
+            // rootMargin: "-100px"
+         }
         const observer = new IntersectionObserver((entries, observer) =>{
-            console.log(entries[0].isIntersecting)
-            if(entries[0].isIntersecting) {
-                this.setState({
-                    intersecting: true
-                })
-            } else {
-                null
-            }
+            console.log(entries)
+            entries.forEach(entry => {
+                console.log(entry)
+                console.log(entry.target.id)
+
+                const id = entry.target.id
+                const index = id - 1
+                if(entry.isIntersecting){
+                    this.setState(prevState =>{
+                        const newInter = [...prevState.inter]
+                        newInter[index].int = true
+                        return {inter: newInter}
+                    })
+                }
+
+            })
         }, options)
 
-        observer.observe(one)
+        pageSections.forEach(item => {
+            observer.observe(item)
+        })
+        // observer.observe(one)
     }
 
 
     render() {
 
-        let one = ""
-        if (this.state.intersecting) {
-            one =
+        let firstPart = ""
+        if (this.state.inter[0].int === true) {
+            firstPart =
             <React.Fragment>
             <Row>
               <Col>
@@ -74,59 +103,74 @@ class About extends Component{
               </React.Fragment>
 
         }
+        let thirdPart = ""
+        if(this.state.inter[2].int === true) {
+            thirdPart =
+            <motion.div
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: "0", opacity: 1 }}
+                transition={{ duration: 1 }}
+                >
+                    <Row>
+                      <Col className="cards-col" md={4}>
+                          <Card style={{ maxWidth: '360px' }}>
+                              <Card.Img variant="top" src={ CardImg } />
+                              <Card.Body>
+                                  <Card.Title className="card-title">Euismod Cursus</Card.Title>
+                                   <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
+                                  <Card.Text>
+                                      Some quick example text to build on the card title and make up the bulk of
+                                      the card's content.
+                                  </Card.Text>
+                              </Card.Body>
+                          </Card>
+                      </Col>
+                      <Col className="cards-col" md={4}>
+                          <Card style={{ maxWidth: '360px' }}>
+                              <Card.Img variant="top" src={ CardImg } />
+                              <Card.Body>
+                                  <Card.Title className="card-title">Euismod Cursus</Card.Title>
+                                   <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
+                                  <Card.Text>
+                                      Some quick example text to build on the card title and make up the bulk of
+                                      the card's content.
+                                  </Card.Text>
+                              </Card.Body>
+                          </Card>
+                      </Col>
+                      <Col className="cards-col" md={4}>
+                          <Card style={{ maxWidth: '360px' }}>
+                              <Card.Img variant="top" src={ CardImg } />
+                              <Card.Body>
+                                  <Card.Title className="card-title">Euismod Cursus</Card.Title>
+                                   <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
+                                  <Card.Text>
+                                      Some quick example text to build on the card title and make up the bulk of
+                                      the card's content.
+                                  </Card.Text>
+                              </Card.Body>
+                          </Card>
+                      </Col>
+                    </Row>
+            </motion.div>
 
+        }
 
 
         return(
                 <Container id="about">
-                    <div id="part-one">
-                        { one }
+                    <div id="1" className="section">
+                        { firstPart }
                     </div>
 
+                    <div id="2" className="section">
+                        <CarouselSection />
+                    </div>
 
-                    <CarouselSection />
+                    <div id="3" className="section">
+                        { thirdPart }
+                    </div>
 
-                  <Row>
-                    <Col className="cards-col" md={4}>
-                        <Card style={{ maxWidth: '360px' }}>
-                            <Card.Img variant="top" src={ CardImg } />
-                            <Card.Body>
-                                <Card.Title className="card-title">Euismod Cursus</Card.Title>
-                                 <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col className="cards-col" md={4}>
-                        <Card style={{ maxWidth: '360px' }}>
-                            <Card.Img variant="top" src={ CardImg } />
-                            <Card.Body>
-                                <Card.Title className="card-title">Euismod Cursus</Card.Title>
-                                 <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col className="cards-col" md={4}>
-                        <Card style={{ maxWidth: '360px' }}>
-                            <Card.Img variant="top" src={ CardImg } />
-                            <Card.Body>
-                                <Card.Title className="card-title">Euismod Cursus</Card.Title>
-                                 <Card.Subtitle className="mb-2 card-subtitle">Cras ac mattis dolor</Card.Subtitle>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                  </Row>
                 </Container>
         )
     }
