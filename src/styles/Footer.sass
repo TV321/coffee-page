@@ -1,4 +1,6 @@
-
+@font-face
+	font-family: AnitaSS
+	src: url('../fonts/Anita Semi Square.ttf')
 #footer
     padding: 50px 0 20px 0
     background-color: #1e1c1b
@@ -7,13 +9,48 @@
         height: 150px
         width: auto
     #stars
-        opacity: .5
+        opacity: .8
+    #footer-title
+        font-family: AnitaSS
+        color: #ebd1ab
+        font-size: 30px
+        line-height: 25px
+        font-weight: 0
 
     div.footer-col
         display: flex
         justify-content: center
         margin: 20px 0
         align-items: center
+    div.media-col
+        flex-direction: column
+        .media-container-footer
+            display: flex
+            .media-icon-footer
+                height: 40px
+                width: 40px
+                font-size: 20px
+                // background-color: #717070
+                border: 1px solid #717070
+                display: flex
+                justify-content: center
+                align-items: center
+                margin: 2px
+                border-radius: 0
+                svg
+                    path
+                        color: #717070
+                        transition: all .3s linear
+                &:hover
+                    svg
+                        path
+                            color: #333333
+                a
+                    width: inherit
+                    height: inherit
+                    display: flex
+                    justify-content: center
+                    align-items: center
 p.footer-text
     color: #585656
     align-self: flex-end

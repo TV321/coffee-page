@@ -4,11 +4,6 @@ import { motion } from "framer-motion"
 import MediaIcons from "./MediaIcons"
 
 
-const variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-}
-
 const HomeSection = () => {
     return(
             <main id="home">
