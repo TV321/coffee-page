@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/HomeSection.sass';
 import { motion } from "framer-motion"
+import MediaIcons from "./MediaIcons"
 
 
 const variants = {
@@ -28,6 +29,7 @@ const HomeSection = () => {
                         Phasellus bibendum arcu sit amet
                     </motion.p>
                 </div>
+                <MediaIcons />
             </main>
     )
 }

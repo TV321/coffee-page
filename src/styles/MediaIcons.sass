@@ -1,0 +1,38 @@
+.media-container
+    position: absolute
+    left: 0
+    .media-icon
+        border-bottom: 2px solid #f7e1c0
+        width: 50px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #f7e1c0
+        font-size: 20px
+        transition: all .5s linear
+        &:hover
+            width: 80px
+        svg
+            path
+                color: #f7e1c0
+        a
+            width: inherit
+            height: inherit
+            display: flex
+            justify-content: center
+            align-items: center
+@media all and (max-width: 1050px)
+    .media-container
+        bottom: 0
+        left: auto
+        display: flex
+        align-items: flex-end
+        .media-icon
+            border-bottom: 0
+            // border-bottom: 1px solid #f7e1c0
+            &:hover
+                width: 50px
+                svg
+                    path
+                        color: darken(#f7e1c0, 10%)
