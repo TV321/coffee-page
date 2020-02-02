@@ -12,9 +12,10 @@ import Intro from "./Intro";
 import Description from "./Description";
 
 
+
 class About extends Component{
     state = {
-        intersecting: false,
+        fabInter: false,
         inter: [
             {
                 id: 1,
@@ -34,7 +35,7 @@ class About extends Component{
         const pageSections = document.querySelectorAll(".section")
         const options = {
             root: null,
-            threshold: 0.9,
+            threshold: 0.4,
             // rootMargin: "-100px"
          }
         const observer = new IntersectionObserver((entries, observer) =>{
@@ -101,7 +102,7 @@ class About extends Component{
                         <motion.div
                             initial={{ y: "100%", opacity: 0 }}
                             animate={{ y: "0", opacity: 1 }}
-                            transition={{ duration: 1.2 }}
+                            transition={{ duration: 1.2}}
                         >
                         <Description />
                         </motion.div>
@@ -116,6 +117,7 @@ class About extends Component{
                     </div>
 
                 </Container>
+
         )
     }
 

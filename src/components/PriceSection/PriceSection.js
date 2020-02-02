@@ -29,7 +29,7 @@ class PriceSection extends Component {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach( entry => {
                 const id = entry.target.id
-                console.log(entry)
+                // console.log(entry)
                 const index = id - 1
                 if(entry.isIntersecting) {
                     this.setState(prevState => {
